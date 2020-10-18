@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { createMuiTheme } from \"@material-ui/core/styles\";\nvar theme = createMuiTheme({\n  overrides: {\n    MuiTableHead: {\n      root: {\n        backgroundColor: \"#f5f5f5\"\n      }\n    }\n  }\n});\nexport default theme;","map":null,"metadata":{},"sourceType":"module"}
