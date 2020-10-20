@@ -51,12 +51,14 @@ export default function Home() {
     end: "",
     breakdown: "all",
     resolution: "day",
+    select: "sum",
+    fill: "none"
   };
 
   const [formData, setFormData] = React.useState(defaultValues);
   const [query, setQuery] = React.useState(defaultValues);
 
-  const { type, statement, start, end, breakdown, resolution } = formData;
+  const { type, statement, start, end, breakdown, resolution, select, fill } = formData;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -183,6 +185,38 @@ export default function Home() {
                     </Select>
                   </FormControl>
                 </Grid>
+
+                <Grid item>
+                  <FormControl fullWidth variant="outlined" size="small">
+                    <InputLabel>Select</InputLabel>
+                    <Select
+                      label="Select"
+                      name="select"
+                      value={select}
+                      onChange={handleChange}
+                    >
+                      <MenuItem value="sum">Sum</MenuItem>
+                      <MenuItem value="max">Max</MenuItem>
+                      <MenuItem value="runningSum">Running Sum</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Grid>
+
+                <Grid item>
+                  <FormControl fullWidth variant="outlined" size="small">
+                    <InputLabel>Fill</InputLabel>
+                    <Select
+                      label="Fill"
+                      name="fill"
+                      value={fill}
+                      onChange={handleChange}
+                    >
+                      <MenuItem value="none">None</MenuItem>
+                      <MenuItem value="previous">Previous</MenuItem>
+                      <MenuItem value="zero">Zero</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Grid> 
 
                 <Grid item>
                   <Button type="submit" variant="outlined">

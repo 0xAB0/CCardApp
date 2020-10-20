@@ -1,14 +1,14 @@
 {
-  "name": "electron-quick-start",
+  "name": "CreditCardApp",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "...",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "build": "next build renderer",
-    "nxtStart": "next start renderer"
+    "nxtStart": "next start renderer",
+    "dev": "next dev renderer"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
     "Electron",
     "quick",
@@ -21,20 +21,18 @@
   "devDependencies": {
     "electron": "^10.1.3",
     "electron-builder": "^22.9.1",
-    "next": "^9.5.5",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "next": "9.5.5",
     "@material-ui/core": "^4.11.0",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "axios": "^0.20.0",
-    "recharts": "^1.8.5",
-    "react-query": "^2.23.1"
+    "@babel/runtime": "7.11.2"
   },
   "dependencies": {
     "electron-is-dev": "^1.2.0",
-    "electron-next": "^3.1.5",
-    "npm": "^6.14.8",
-    "pm2": "^4.5.0"
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-query": "^2.23.1",
+    "recharts": "^1.8.5"
   },
   "build": {
     "files": [
